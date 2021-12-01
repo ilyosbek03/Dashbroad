@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: rgb(63,94,251);
+            background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+        }
+        .sidebar{
+            width: 300px;
+            height: 90vh;
+            background-color: #313137;
+        }
+        .sidebar_title{
+            width: 100%;
+            height: 100px;
+            color: #c5c4ca;
+            font-family: sans-serif;
+            display: flex;
+            align-items: center;
+        }
+        .sidebar_title > h1{
+            margin-left: 30px;
+            flex: 1;
+
+        }
+        .sidebar_title >i{
+            font-size: 30px;
+            margin-right: 30px;
+        }
+        .miguel{
+            width: 100%;
+            height: 80px;
+            background-color: #24232a;
+            display: flex;
+            justify-content: center;
+        }
+        .mendes{
+            width: 50%;
+            height: 100%;
+            background-color: #24232a;
+            align-items: center;
+            font-size: 20px;
+            color: #fff;
+            font-family: sans-serif;
+
+        }
+        .mendes> h5{
+            margin-left: 30px;
+            font-weight: 500;
+            padding-top: 25px;
+        }
+        .mendes> h6{
+            margin-left: 30px;
+            font-weight: 500;
+        }
+        .down{
+            background-color: #24232a;
+            width: 10%;
+            height:100%;
+            flex: 1;
+            align-items: center;
+            color: #fff;
+            font-size: 20px;
+            display: flex;
+            margin-left: 10px;
+        }
+        .option{
+            width: 30%;
+            height: 100%;
+            background-color: #24232a;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            color: #fff;
+            font-size: 30px;
+        }
+        .all{
+            width: 100%;
+            height: 250px;
+            background-color: #313137;
+        }
+        .icon{
+            height: 20%;
+            width: 100%;
+            align-items: center;
+            
+        }
+        .icons{
+            margin-left: 30px;
+            color: #fff;
+            font-size: 20px;
+            align-items: center;
+            margin-top: 15px;
+            font-family: sans-serif;
+        }
+        .more{
+            width: 100%;
+            height: 40px;
+            background-color: #24232A;
+            display: flex;
+            align-items: center;
+            color: #c5c4ca;
+            margin-top: 50px;
+        }
+        .more> p{
+            font-family: sans-serif;
+            font-size: 15px;
+            margin-left: 30px;
+            flex: 1;
+        }
+        .more> i{
+            margin-right: 30px;
+        }
+        .help{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            background-color: #313137;
+            margin-top: 180px;
+        }
+        .help> i{
+            margin-left: 30px;
+            font-size: 30px;
+            font-family: sans-serif;
+            color: #fff;
+            font-weight: 500;
+        }
+        .help> p{
+            margin-left: 20px;
+            font-family: sans-serif;
+            font-size: 20px;
+            color: #fff;
+        }
+        .icons2{
+            margin-left: 30px;
+            color: #9af3bd;
+            font-size: 20px;
+            align-items: center;
+            margin-top: 15px;
+            font-family: sans-serif; 
+        }
+
+
+
+
+
+
+        .sidebar1{
+            width: 300px;
+            margin-right: 30px;
+            height: 90vh;
+            background-color: #313137;
+        }
+        .sidebar_title1{
+            width: 100%;
+            height: 100px;
+            color: #c5c4ca;
+            font-family: sans-serif;
+            display: flex;
+            align-items: center;
+        }
+        .sidebar_title1 > h1{
+            margin-left: 30px;
+            flex: 1;
+
+        }
+        .sidebar_title1 >i{
+            font-size: 30px;
+            margin-right: 30px;
+        }
+        .miguel1{
+            width: 100%;
+            height: 80px;
+            background-color: #313137;
+            display: flex;
+            justify-content: center;
+        }
+        .mendes1{
+            width: 50%;
+            height: 100%;
+            background-color: #313137;
+            align-items: center;
+            font-size: 20px;
+            color: #fff;
+            font-family: sans-serif;
+
+        }
+        .mendes1> h5{
+            margin-left: 30px;
+            padding-top: 25px;
+            font-weight: 500;
+        }
+        .mendes1> h6{
+            margin-left: 30px;
+        }
+        .down1{
+            background-color: #313137;
+            width: 10%;
+            height:100%;
+            flex: 1;
+            align-items: center;
+            color: #fff;
+            font-size: 20px;
+            display: flex;
+            margin-left: 10px;
+        }
+        .option1{
+            width: 30%;
+            height: 100%;
+            background-color: #313137;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            color: #fff;
+            font-size: 30px;
+        }
+        .all1{
+            width: 100%;
+            height: 250px;
+            background-color: #313137;
+        }
+        .icon1{
+            height: 20%;
+            width: 100%;
+            align-items: center;
+            
+        }
+        .icons1{
+            margin-left: 30px;
+            color: #fff;
+            font-size: 20px;
+            align-items: center;
+            margin-top: 15px;
+            font-family: sans-serif;
+        }
+        .more1{
+            width: 100%;
+            height: 40px;
+            background-color: #24232A;
+            display: flex;
+            align-items: center;
+            color: #c5c4ca;
+            margin-top: 50px;
+        }
+        .more1> p{
+            font-family: sans-serif;
+            font-size: 15px;
+            margin-left: 30px;
+            flex: 1;
+        }
+        .more1> i{
+            margin-right: 30px;
+        }
+        .help1{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            background-color: #313137;
+            margin-top: 180px;
+        }
+        .help1> i{
+            margin-left: 30px;
+            font-size: 30px;
+            font-family: sans-serif;
+            color: #fff;
+            font-weight: 500;
+        }
+        .help1> p{
+            margin-left: 20px;
+            font-family: sans-serif;
+            font-size: 20px;
+            color: #fff;
+        }
+        .icons12{
+            margin-left: 30px;
+            color: #9af3bd;
+            font-size: 20px;
+            align-items: center;
+            margin-top: 15px;
+            font-family: sans-serif; 
+        }
+        .solid1{
+            width: 80%;
+            height: 1px;
+            background-color: gray;
+            margin-left: 10%;
+            margin-top: 240px;
+            box-shadow: 0px 0px 5px #fff;
+        }
+
+
+
+        .sidebar2{
+            width: 300px;
+            height: 90vh;
+            margin-right: 30px;
+            background-color: #313137;
+        }
+        .sidebar_title2{
+            width: 100%;
+            height: 100px;
+            color: #c5c4ca;
+            font-family: sans-serif;
+            display: flex;
+            align-items: center;
+        }
+        .sidebar_title2 > h1{
+            margin-left: 15px;
+            flex: 1;
+
+        }
+        .sidebar_title2 >i{
+            font-size: 30px;
+            margin-right: 15px;
+        }
+        .sidebar_live2{
+            width: 100%;
+            height: 50px;
+            background-color: #24232A;
+            display: flex;
+            align-items: center;
+            color: #9af3bd;
+        }
+        .eye2{
+            margin-left: 15px;
+            font-family: sans-serif;
+            flex: 1;
+        }
+        .sidebar_live2 >i{
+            margin-right: 15px;
+        }
+        .sidebar_collection2{
+            width: 100%;
+            height: 230px;
+        }
+        .collection_top2, .collection_bottom2{
+            width: 100%;
+            height: 150px;
+            display: flex;
+
+        }
+        .sidebar_option2{
+            width: 50%;
+            height: 100%;
+            align-items: center;
+            display:flex;
+            justify-content: center;
+            flex-direction: column;
+            color: #c5c4ca; 
+            border-radius: 10px;
+        }
+        .sidebar_option2> i{
+            font-size: 40px;
+        }
+        .sidebar_option2> p{
+            font-family: sans-serif;
+            font-size: 15px;
+            color: #c5c4ca;
+            margin-top: 5px;
+        }
+        .sidebar_option2:hover{
+            background-color: #24232a;
+            cursor: pointer;
+        }
+        .more2{
+            width: 80%;
+            height: 40px;
+            background-color: #24232A;
+            display: flex;
+            align-items: center;
+            margin-left: 10%;
+            color: #c5c4ca;
+        }
+        .more2> p{
+            font-family: sans-serif;
+            font-size: 15px;
+            margin-left: 15px;
+            flex: 1;
+        }
+        .more2> i{
+            margin-right: 15px;
+        }
+        .miguel2{
+            width: 100%;
+            height: 70px;
+            background-color: #313137;
+            display: flex;
+            justify-content: center;
+        }
+        .mendes2{
+            width: 50%;
+            height: 100%;
+            background-color: #313137;
+            align-items: center;
+            font-size: 20px;
+            color: #fff;
+            font-family: sans-serif;
+            font-weight: 500;
+
+        }
+        .mendes2> h5{
+            margin-left: 30px;
+            padding-top: 15px;
+        }
+        .mendes2> h6{
+            margin-left: 30px;
+        }
+        .down2{
+            background-color: #313137;
+            width: 10%;
+            height:100%;
+            flex: 1;
+            align-items: center;
+            color: #fff;
+            font-size: 20px;
+            display: flex;
+            margin-left: 10px;
+        }
+        .option2{
+            width: 30%;
+            height: 100%;
+            background-color: #313137;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            color: #fff;
+            font-size: 30px;
+        }
+        .solid2{
+            width: 80%;
+            height: 1px;
+            background-color: gray;
+            margin-left: 10%;
+            margin-top: 205px;
+            box-shadow: 0px 0px 5px #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar1">
+        <div class="sidebar_title1">
+            <h1>Format</h1>
+            <i class="fas fa-stream"></i>
+        </div>
+        
+        <div class="all1">
+            <div class="icon1">
+                <p class="icons12"> <i class="far fa-eye"></i> View live site </p>   
+            </div>
+            <div class="icon1">
+                <p class="icons1"><i class="fas fa-qrcode"></i> Dashboard</p>    
+            </div>
+            <div class="icon1">
+                <p class="icons1"><i class="fas fa-list-ul"></i> Site menu</p>
+            </div>
+            <div class="icon1">
+                <p class="icons1"><i class="fas fa-shapes"></i> Design</p>
+            </div>
+            <div class="icon1">
+                <p class="icons1"><i class="fas fa-file-alt"></i> Pages</p>
+            </div>
+        </div>
+        <div class="more1">
+            <p>MORE  </p>
+            <i class="fas fa-chevron-down"></i> 
+        </div>
+        <div class="solid1">
+
+        </div>
+        <div class="miguel1">
+            <div class="mendes1">
+                <h5>Miguel Mendes</h5>
+                <h6>Pro yearly</h6>
+            </div>
+            <div class="down1">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="option1">
+                <i class="fas fa-cog"></i>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+
+    <div class="sidebar2">
+        <div class="sidebar_title2">
+            <h1>Format</h1>
+            <i class="fas fa-stream"></i>
+        </div>
+        <div class="sidebar_live2">
+            <p class="eye2"> <i class="far fa-eye"></i> View live site </p> <i class="fas fa-chevron-right"></i>
+        </div>
+        <div class="sidebar_collection2">
+            <div class="collection_top2">
+                <div class="sidebar_option2"> <i class="fas fa-qrcode"></i> <p>Dashboard</p> </div>
+                <div class="sidebar_option2"> <i class="fas fa-list-ul"></i> <p>Site menu</p> </div>
+            </div>
+            <div class="collection_bottom2">
+                <div class="sidebar_option2"> <i class="fas fa-shapes"></i> <p>Design</p> </div>
+                <div class="sidebar_option2"> <i class="fas fa-file-alt"></i> <p>Pages</p> </div>
+            </div>
+            <div class="more2">
+                <p>MORE  </p>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="solid2">
+
+            </div>
+            <div class="miguel2">
+                <div class="mendes2">
+                    <h5>Miguel Mendes</h5>
+                    <h6>Pro yearly</h6>
+                </div>
+                <div class="down2">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="option2">
+                    <i class="fas fa-cog"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+    
+    <div class="sidebar">
+        <div class="sidebar_title">
+            <h1>Format</h1>
+            <i class="fas fa-stream"></i>
+        </div>
+        <div class="miguel">
+            <div class="mendes">
+                <h5>Miguel Mendes</h5>
+                <h6>Pro yearly</h6>
+            </div>
+            <div class="down">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="option">
+                <i class="fas fa-cog"></i>
+            </div>
+        </div>
+        <div class="all">
+            <div class="icon">
+                <p class="icons2"> <i class="far fa-eye"></i> View live site </p>   
+            </div>
+            <div class="icon">
+                <p class="icons"><i class="fas fa-qrcode"></i> Dashboard</p>    
+            </div>
+            <div class="icon">
+                <p class="icons"><i class="fas fa-list-ul"></i> Site menu</p>
+            </div>
+            <div class="icon">
+                <p class="icons"><i class="fas fa-shapes"></i> Design</p>
+            </div>
+            <div class="icon">
+                <p class="icons"><i class="fas fa-file-alt"></i> Pages</p>
+            </div>
+        </div>
+        <div class="more">
+            <p>MORE  </p>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="help">
+            <i class="fas fa-question"></i> <p>Help</p>
+        </div> 
+    </div>
+</body>
+</html>
